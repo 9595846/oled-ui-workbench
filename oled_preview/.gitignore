@@ -1,0 +1,6 @@
+vendor/
+drafts/
+__pycache__/
+*.pyc
+.venv/
+exports/

@@ -1,0 +1,30 @@
+{
+  "version": 2,
+  "revision": 0,
+  "source_hash": "portable-font-v1",
+  "font_mode": "chinese_preview",
+  "title": "新界面项目",
+  "page": 0,
+  "ideas": "",
+  "variables": {
+    "value": 0
+  },
+  "active_dialog": null,
+  "pages": [
+    {
+      "name": "主页面",
+      "elements": [
+        {
+          "id": "element",
+          "kind": "text",
+          "x": 38,
+          "y": 4,
+          "text": "主页面",
+          "w": 128,
+          "h": 64
+        }
+      ],
+      "bindings": {}
+    }
+  ]
+}
