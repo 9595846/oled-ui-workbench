@@ -1,3 +1,5 @@
+> **桌面套装与联动入口：** 主体维护在 [wiring-workbench](https://github.com/9595846/wiring-workbench)，支持独立运行、设计预览联动与统一启动器。详见 [套装说明](docs/WORKBENCH_SUITE.md)。本仓库原有独立使用说明与代码继续保留。
+
 # OLED UI Workbench · OLED 界面设计与 STM32 接入
 
 为 128×64 单色 OLED 制作的本地中文界面编辑器：编辑文字、图片和弹窗，模拟按键与旋钮，保存项目与预设，通过网页或 MCP 导出待审阅的 C 文件，再接入 STM32 Keil 工程。
