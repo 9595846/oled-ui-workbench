@@ -1,10 +1,26 @@
-> **桌面套装与联动入口：** 主体维护在 [wiring-workbench](https://github.com/9595846/wiring-workbench)，支持独立运行、设计预览联动与统一启动器。详见 [套装说明](docs/WORKBENCH_SUITE.md)。本仓库原有独立使用说明与代码继续保留。
+# OLED UI Workbench · 中文 OLED 界面编辑器
 
-# OLED UI Workbench · OLED 界面设计与 STM32 接入
+**先在电脑上排好 128×64 OLED 界面，再审阅导出文件并接入 STM32。**
 
-为 128×64 单色 OLED 制作的本地中文界面编辑器：编辑文字、图片和弹窗，模拟按键与旋钮，保存项目与预设，通过网页或 MCP 导出待审阅的 C 文件，再接入 STM32 Keil 工程。
+编辑中文、图片和弹窗，模拟按键与旋钮，保存页面预设，导出待审阅的 C 文件。首次体验只需电脑，无需先接 OLED、安装 Keil 或配置 MCP。
+
+[开始体验](#快速启动windows) · [做出第一个页面](docs/FIRST_RUN.md) · [完整指南](oled_preview/STUDIO_GUIDE.md) · [反馈问题](https://github.com/9595846/oled-ui-workbench/issues/new/choose)
 
 ![中文工作台与元素选择示例](docs/studio.png)
+
+*编辑器截图。电脑预览、C 文件编译与实体 OLED 显示需要分别验证。*
+
+## 独立版和套装版怎么选
+
+| 使用场景 | 推荐入口 |
+| --- | --- |
+| 只编辑 OLED，并查看本仓库的 Keil 示例 | 使用本仓库，下方提供源码启动步骤 |
+| 同时设计接线和屏幕，使用统一桌面启动器 | 使用主仓库 [wiring-workbench](https://github.com/9595846/wiring-workbench)，见[套装说明](docs/WORKBENCH_SUITE.md) |
+| 想让 AI 修改设计 | 先保存草稿，再配置可选的 [MCP 接口](#mcp) |
+
+套装配套源码在主仓库维护；本仓库保留独立编辑器与示例。两处版本和数据不会自动同步，请按各自文档操作。
+
+**分发状态（2026-11-10）：** 本仓库尚无正式 Release 下载包，GitHub“Download ZIP”下载的是源码。首次使用请按下面的源码步骤启动。
 
 ## 能做什么
 
@@ -21,6 +37,8 @@
 需要 Python 3.10+，中文补充预览需要 Windows 宋体。先进入克隆后的仓库根目录：
 
 ```powershell
+git clone https://github.com/9595846/oled-ui-workbench.git
+cd oled-ui-workbench
 python -m venv oled_preview/.venv
 ./oled_preview/.venv/Scripts/python.exe -m pip install -r oled_preview/requirements.txt
 ./oled_preview/.venv/Scripts/python.exe -X utf8 oled_preview/server.py
